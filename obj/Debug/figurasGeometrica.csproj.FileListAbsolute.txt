@@ -1,0 +1,10 @@
+C:\Users\gabri\source\repos\figurasGeometrica\bin\Debug\figurasGeometrica.exe.config
+C:\Users\gabri\source\repos\figurasGeometrica\bin\Debug\figurasGeometrica.exe
+C:\Users\gabri\source\repos\figurasGeometrica\bin\Debug\figurasGeometrica.pdb
+C:\Users\gabri\source\repos\figurasGeometrica\obj\Debug\figurasGeometrica.csproj.AssemblyReference.cache
+C:\Users\gabri\source\repos\figurasGeometrica\obj\Debug\figurasGeometrica.Properties.Resources.resources
+C:\Users\gabri\source\repos\figurasGeometrica\obj\Debug\figurasGeometrica.csproj.GenerateResource.cache
+C:\Users\gabri\source\repos\figurasGeometrica\obj\Debug\figurasGeometrica.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\figurasGeometrica\obj\Debug\figurasGeometrica.exe
+C:\Users\gabri\source\repos\figurasGeometrica\obj\Debug\figurasGeometrica.pdb
+C:\Users\gabri\source\repos\figurasGeometrica\obj\Debug\figurasGeometrica.Form1.resources
