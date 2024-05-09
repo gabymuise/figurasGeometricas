@@ -47,6 +47,11 @@
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtPerimetro = new System.Windows.Forms.TextBox();
             this.txtLado1 = new System.Windows.Forms.TextBox();
+            this.lblLongLados = new System.Windows.Forms.Label();
+            this.txtLongLados = new System.Windows.Forms.TextBox();
+            this.btnPoligono = new System.Windows.Forms.Button();
+            this.txtLadoP = new System.Windows.Forms.TextBox();
+            this.lblLadoP = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtLado3
@@ -64,7 +69,6 @@
             this.txtRadio.Size = new System.Drawing.Size(119, 22);
             this.txtRadio.TabIndex = 2;
             this.txtRadio.Visible = false;
-            
             // 
             // txtLado2
             // 
@@ -128,7 +132,7 @@
             // 
             this.btnCuadrado.Location = new System.Drawing.Point(594, 126);
             this.btnCuadrado.Name = "btnCuadrado";
-            this.btnCuadrado.Size = new System.Drawing.Size(144, 23);
+            this.btnCuadrado.Size = new System.Drawing.Size(144, 26);
             this.btnCuadrado.TabIndex = 9;
             this.btnCuadrado.Text = "Cuadrado";
             this.btnCuadrado.UseVisualStyleBackColor = true;
@@ -138,7 +142,7 @@
             // 
             this.btnTriangulo.Location = new System.Drawing.Point(594, 155);
             this.btnTriangulo.Name = "btnTriangulo";
-            this.btnTriangulo.Size = new System.Drawing.Size(144, 23);
+            this.btnTriangulo.Size = new System.Drawing.Size(144, 26);
             this.btnTriangulo.TabIndex = 10;
             this.btnTriangulo.Text = "Triangulo";
             this.btnTriangulo.UseVisualStyleBackColor = true;
@@ -146,9 +150,9 @@
             // 
             // btnCirculo
             // 
-            this.btnCirculo.Location = new System.Drawing.Point(594, 184);
+            this.btnCirculo.Location = new System.Drawing.Point(594, 182);
             this.btnCirculo.Name = "btnCirculo";
-            this.btnCirculo.Size = new System.Drawing.Size(144, 23);
+            this.btnCirculo.Size = new System.Drawing.Size(144, 26);
             this.btnCirculo.TabIndex = 11;
             this.btnCirculo.Text = "Circulo";
             this.btnCirculo.UseVisualStyleBackColor = true;
@@ -157,7 +161,7 @@
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(9, 126);
+            this.lblArea.Location = new System.Drawing.Point(9, 162);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(39, 16);
             this.lblArea.TabIndex = 12;
@@ -166,7 +170,7 @@
             // lblPerimetro
             // 
             this.lblPerimetro.AutoSize = true;
-            this.lblPerimetro.Location = new System.Drawing.Point(9, 155);
+            this.lblPerimetro.Location = new System.Drawing.Point(9, 191);
             this.lblPerimetro.Name = "lblPerimetro";
             this.lblPerimetro.Size = new System.Drawing.Size(65, 16);
             this.lblPerimetro.TabIndex = 13;
@@ -175,7 +179,7 @@
             // lblAltura
             // 
             this.lblAltura.AutoSize = true;
-            this.lblAltura.Location = new System.Drawing.Point(9, 182);
+            this.lblAltura.Location = new System.Drawing.Point(9, 213);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(41, 16);
             this.lblAltura.TabIndex = 14;
@@ -192,7 +196,7 @@
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(93, 123);
+            this.txtArea.Location = new System.Drawing.Point(93, 155);
             this.txtArea.Name = "txtArea";
             this.txtArea.ReadOnly = true;
             this.txtArea.Size = new System.Drawing.Size(151, 22);
@@ -200,7 +204,7 @@
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(93, 179);
+            this.txtAltura.Location = new System.Drawing.Point(93, 213);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.ReadOnly = true;
             this.txtAltura.Size = new System.Drawing.Size(151, 22);
@@ -209,7 +213,7 @@
             // 
             // txtPerimetro
             // 
-            this.txtPerimetro.Location = new System.Drawing.Point(93, 152);
+            this.txtPerimetro.Location = new System.Drawing.Point(93, 184);
             this.txtPerimetro.Name = "txtPerimetro";
             this.txtPerimetro.ReadOnly = true;
             this.txtPerimetro.Size = new System.Drawing.Size(151, 22);
@@ -223,11 +227,58 @@
             this.txtLado1.TabIndex = 18;
             this.txtLado1.Visible = false;
             // 
+            // lblLongLados
+            // 
+            this.lblLongLados.AutoSize = true;
+            this.lblLongLados.Location = new System.Drawing.Point(156, 94);
+            this.lblLongLados.Name = "lblLongLados";
+            this.lblLongLados.Size = new System.Drawing.Size(72, 16);
+            this.lblLongLados.TabIndex = 19;
+            this.lblLongLados.Text = "CantLados";
+            // 
+            // txtLongLados
+            // 
+            this.txtLongLados.Location = new System.Drawing.Point(140, 114);
+            this.txtLongLados.Name = "txtLongLados";
+            this.txtLongLados.Size = new System.Drawing.Size(119, 22);
+            this.txtLongLados.TabIndex = 20;
+            // 
+            // btnPoligono
+            // 
+            this.btnPoligono.Location = new System.Drawing.Point(594, 208);
+            this.btnPoligono.Name = "btnPoligono";
+            this.btnPoligono.Size = new System.Drawing.Size(144, 26);
+            this.btnPoligono.TabIndex = 21;
+            this.btnPoligono.Text = "Poligono";
+            this.btnPoligono.UseVisualStyleBackColor = true;
+            this.btnPoligono.Click += new System.EventHandler(this.btnPoligono_Click_1);
+            // 
+            // txtLadoP
+            // 
+            this.txtLadoP.Location = new System.Drawing.Point(12, 114);
+            this.txtLadoP.Name = "txtLadoP";
+            this.txtLadoP.Size = new System.Drawing.Size(119, 22);
+            this.txtLadoP.TabIndex = 22;
+            // 
+            // lblLadoP
+            // 
+            this.lblLadoP.AutoSize = true;
+            this.lblLadoP.Location = new System.Drawing.Point(49, 95);
+            this.lblLadoP.Name = "lblLadoP";
+            this.lblLadoP.Size = new System.Drawing.Size(47, 16);
+            this.lblLadoP.TabIndex = 23;
+            this.lblLadoP.Text = "LadoP";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 273);
+            this.Controls.Add(this.lblLadoP);
+            this.Controls.Add(this.txtLadoP);
+            this.Controls.Add(this.btnPoligono);
+            this.Controls.Add(this.txtLongLados);
+            this.Controls.Add(this.lblLongLados);
             this.Controls.Add(this.txtLado1);
             this.Controls.Add(this.txtPerimetro);
             this.Controls.Add(this.txtAltura);
@@ -275,6 +326,11 @@
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtPerimetro;
         private System.Windows.Forms.TextBox txtLado1;
+        private System.Windows.Forms.Label lblLongLados;
+        private System.Windows.Forms.TextBox txtLongLados;
+        private System.Windows.Forms.Button btnPoligono;
+        private System.Windows.Forms.TextBox txtLadoP;
+        private System.Windows.Forms.Label lblLadoP;
     }
 }
 

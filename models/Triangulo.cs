@@ -12,7 +12,7 @@ namespace figurasGeometrica.models
         private decimal Lado1;
         private decimal Lado2;
         private decimal Lado3;
-        public Triangulo(decimal Lado,decimal lado2,decimal lado3)
+        public Triangulo(decimal Lado, decimal lado2, decimal lado3)
         {
             this.Lado1 = Lado;
             this.Lado2 = lado2;
@@ -50,19 +50,15 @@ namespace figurasGeometrica.models
 
         public decimal CalcularArea()
         {
-            if (Lado1 == Lado2 && Lado3 == Lado1)
-            {
-                decimal a = (Lado1 * Lado2) / 2;
-                return a;
-            }
-            else
-            {
-                Console.WriteLine("Solo calcula triangulos equilatero");
-            }
-            return 0;
+            
+            decimal s = (Lado1 + Lado2 + Lado3) / 2;
+
+            
+            decimal area = (decimal)Math.Sqrt((double)(s * (s - Lado1) * (s - Lado2) * (s - Lado3)));
+
+            return area;
         }
 
     }
-
 
 }

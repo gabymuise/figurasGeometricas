@@ -11,7 +11,8 @@ namespace figurasGeometrica
         {
             Cuadrado,
             Triangulo,
-            Circulo
+            Circulo,
+            Poligono
         }
 
         private TipoFigura figuraSeleccionada;
@@ -36,6 +37,7 @@ namespace figurasGeometrica
                 if (control is Label || control is TextBox)
                 {
                     control.Visible = true;
+                   
                 }
             }
         }
@@ -43,8 +45,14 @@ namespace figurasGeometrica
         private void MostrarControlesCuadrado()
         {
             MostrarControles(lblLado1, txtLado1);
+
         }
 
+        private void MostrarControlesPoligono()
+        {
+            MostrarControles(lblLadoP, txtLadoP, txtLongLados, lblLongLados);
+
+        }
         private void MostrarControlesTriangulo()
         {
             MostrarControles(lblLado1, txtLado1, lblLado2, txtLado2, lblLado3, txtLado3);
@@ -85,6 +93,9 @@ namespace figurasGeometrica
                 case TipoFigura.Circulo:
                     CalcularCirculo();
                     break;
+                case TipoFigura.Poligono:
+                    CalcularPoligono();
+                    break;
                 default:
                     break;
             }
@@ -100,6 +111,16 @@ namespace figurasGeometrica
             }
         }
 
+        private void CalcularPoligono()
+        {
+            if (int.TryParse(txtLadoP.Text, out int lados) &&
+                decimal.TryParse(txtLongLados.Text, out decimal longitudLado))
+            {
+                Poligono poligono = new Poligono(lados, longitudLado);
+                txtArea.Text = poligono.CalcularArea().ToString();
+                txtPerimetro.Text = poligono.CalcularPerimetro().ToString();
+            }
+        }
         private void CalcularTriangulo()
         {
             if (decimal.TryParse(txtLado1.Text, out decimal lado1) &&
@@ -144,9 +165,17 @@ namespace figurasGeometrica
             SeleccionarFigura(TipoFigura.Circulo);
         }
 
+        private void btnPoligono_Click_1(object sender, EventArgs e)
+        {
+            OcultarTodosLosControles();
+            MostrarControlesPoligono();
+            SeleccionarFigura(TipoFigura.Poligono);
+        }
+
         private void btnStart_Click(object sender, EventArgs e)
         {
             Calcular();
         }
+
     }
 }
